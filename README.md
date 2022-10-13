@@ -1,12 +1,12 @@
-# Canistergeek-IC-Motoko
+# Canistergeek-Motoko
 
-Canistergeek-IC-Motoko is the open-source tool for Internet Computer to track your project canisters cycles and memory status and collect log messages.
+Canistergeek-Motoko is the open-source tool for Internet Computer to track your project canisters cycles and memory status and collect log messages.
 
-Canistergeek-IC-Motoko can be integrated into your canisters as motoko library which exposes following components:
+Canistergeek-Motoko can be integrated into your canisters as motoko library which exposes following components:
 - `Monitor` - public class that collects the data for specific canister by 5 minutes intervals.
 - `Logger` - public class that collects log messages for specific canister.
 
-Canistergeek-IC-Motoko should be used together with [Canistergeek-IC-JS](https://github.com/usergeek/canistergeek-ic-js) - Javascript library that fetches the data from canisters, performs all necessary calculations and displays it on a webpage 
+Canistergeek-Motoko should be used together with [Canistergeek-IC-JS](https://github.com/usergeek/canistergeek-ic-js) - Javascript library that fetches the data from canisters, performs all necessary calculations and displays it on a webpage 
 
 #### Memory consumption
 
@@ -62,7 +62,7 @@ Vessel is a package manager for Motoko. [Learn more](https://github.com/dfinity/
 let
   additions =
       [{ name = "canistergeek"
-      , repo = "https://github.com/usergeek/canistergeek-ic-motoko"
+      , repo = "https://github.com/usergeek/canistergeek-motoko"
       , version = "v0.0.5"
       , dependencies = ["base"] : List Text
       }] : List Package
@@ -71,13 +71,13 @@ let
 - Add canistergeek to your `vessel.dhall`:
 
 ```dhall
-dependencies = [ ..., "canistergeek" ],
+dependencies = [ ..., "canistergeek-motoko" ],
 ```
 
 - Import library in your canister
 
 ```motoko
-import Canistergeek "mo:canistergeek/canistergeek";
+import Canistergeek "mo:canistergeek-motoko/canistergeek";
 ```
 
 
