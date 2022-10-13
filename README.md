@@ -63,21 +63,21 @@ let
   additions =
       [{ name = "canistergeek"
       , repo = "https://github.com/usergeek/canistergeek-motoko"
-      , version = "v0.0.5"
-      , dependencies = ["base"] : List Text
+      , version = "v0.0.1"
+      , dependencies = ["base", "candy_0_1_10" ]
       }] : List Package
 ```
 
 - Add canistergeek to your `vessel.dhall`:
 
 ```dhall
-dependencies = [ ..., "canistergeek-motoko" ],
+dependencies = [ ..., "canistergeek" ],
 ```
 
 - Import library in your canister
 
 ```motoko
-import Canistergeek "mo:canistergeek-motoko/canistergeek";
+import Canistergeek "mo:canistergeek/canistergeek";
 ```
 
 
