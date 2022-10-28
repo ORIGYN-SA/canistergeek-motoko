@@ -6,7 +6,7 @@ Canistergeek-Motoko can be integrated into your canisters as motoko library whic
 - `Monitor` - public class that collects the data for specific canister by 5 minutes intervals.
 - `Logger` - public class that collects log messages for specific canister.
 
-Canistergeek-Motoko should be used together with [Canistergeek-IC-JS](https://github.com/usergeek/canistergeek-ic-js) - Javascript library that fetches the data from canisters, performs all necessary calculations and displays it on a webpage 
+Canistergeek-Motoko should be used together with [Canistergeek-JS](https://github.com/ORIGYN-SA/canistergeek-js) - Javascript library that fetches the data from canisters, performs all necessary calculations and displays it on a webpage 
 
 #### Memory consumption
 
