@@ -1,6 +1,6 @@
 # Canistergeek-Motoko
 
-Canistergeek-Motoko is the open-source tool for Internet Computer to track your project canisters cycles and memory status and collect log messages.
+This repo is a [fork of Canistergeek-Motoko.](https://github.com/usergeek/canistergeek-ic-motoko) This tool is an open-source project for Internet Computer to track your project canisters cycles and memory status and collect log messages for [Origyn NFT](https://github.com/ORIGYN-SA/origyn_nft).
 
 Canistergeek-Motoko can be integrated into your canisters as motoko library which exposes following components:
 - `Monitor` - public class that collects the data for specific canister by 5 minutes intervals.
