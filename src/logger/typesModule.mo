@@ -1,9 +1,8 @@
 import Array "mo:base/Array";
 import Buffer "mo:base/Buffer";
 import Iter "mo:base/Iter";
-import Candy "mo:candy_0_1_10/types";
-import CandyTypes "mo:candy_0_1_10/types";
 import Principal "mo:base/Principal";
+
 import UtilsModule "../utilsModule";
 
 module {
@@ -17,13 +16,21 @@ module {
     
     public type Message = Text;
     public type Nanos = Nat64;
-    public type Data = CandyTypes.CandyValue;
+    public type Data = Blob;
     public type Caller = ?Principal;
 
     public type LogMessagesData = {
         timeNanos: Nanos;        
-        message: Text;
+        message: Message;
         data: Data;
+        caller: Caller;
+    };
+
+    // We use this structure for the response. Note field data as Text
+    public type LogMessagesDataString = {
+        timeNanos: Nanos;        
+        message: Text;
+        data: Text;
         caller: Caller;
     };
 
@@ -51,6 +58,11 @@ module {
         #messages : CanisterLogMessages;
     };
 
+    public type CanisterLogResponseString = {
+        #messagesInfo: CanisterLogMessagesInfo;
+        #messages : CanisterLogMessagesString;
+    };
+
     public type GetLogMessagesFilter = {
         messageContains: ?Text;
         messageRegex: ?Text;
@@ -71,6 +83,11 @@ module {
 
     public type CanisterLogMessages = {
         data: [LogMessagesData];
+        lastAnalyzedMessageTimeNanos: ?Nanos;
+    };
+
+    public type CanisterLogMessagesString = {
+        data: [LogMessagesDataString];
         lastAnalyzedMessageTimeNanos: ?Nanos;
     };
 

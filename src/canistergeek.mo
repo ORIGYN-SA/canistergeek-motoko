@@ -11,13 +11,14 @@ import Option "mo:base/Option";
 import Prim "mo:prim";
 import Text "mo:base/Text";
 import Time "mo:base/Time";
+
 import CalculatorModule "calculatorModule";
 import DateModule "dateModule";
-import TypesModule "typesModule";
-import LoggerTypesModule "logger/typesModule";
-import LoggerCollector "logger/collectorModule";
 import LoggerCalculator "logger/calculatorModule";
+import LoggerCollector "logger/collectorModule";
 import LoggerStorage "logger/storageModule";
+import LoggerTypesModule "logger/typesModule";
+import TypesModule "typesModule";
 
 module Canistergeek {
 
@@ -87,6 +88,7 @@ module Canistergeek {
     public type LoggerMessage = LoggerTypesModule.Message;
     public type CanisterLogRequest = LoggerTypesModule.CanisterLogRequest;
     public type CanisterLogResponse = LoggerTypesModule.CanisterLogResponse;
+    public type CanisterLogResponseString = LoggerTypesModule.CanisterLogResponseString;
 
     public class Logger() {
 
