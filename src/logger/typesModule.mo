@@ -1,8 +1,8 @@
 import Array "mo:base/Array";
 import Buffer "mo:base/Buffer";
 import Iter "mo:base/Iter";
-import Candy "mo:candy_0_1_10/types";
-import CandyTypes "mo:candy_0_1_10/types";
+import Candy "mo:candy/types";
+import CandyTypes "mo:candy/types";
 import Principal "mo:base/Principal";
 import UtilsModule "../utilsModule";
 
