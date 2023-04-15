@@ -1,8 +1,7 @@
 import Array "mo:base/Array";
 import Buffer "mo:base/Buffer";
 import Iter "mo:base/Iter";
-import Candy "mo:candy/types";
-import CandyTypes "mo:candy/types";
+import CandyTypes "mo:candy_0_2_0/types";
 import Principal "mo:base/Principal";
 import UtilsModule "../utilsModule";
 
@@ -17,7 +16,7 @@ module {
     
     public type Message = Text;
     public type Nanos = Nat64;
-    public type Data = CandyTypes.CandyValue;
+    public type Data = CandyTypes.CandyShared;
     public type Caller = ?Principal;
 
     public type LogMessagesData = {
